@@ -9,6 +9,8 @@
 import UIKit
 import AVFoundation
 
+// Rev.ai token 02GVy4ZErKZVWt2TrWcZZxbYpyoAbUzyLAu85ar-14HEmMmbKHvDGsueOChXtQ0bPmHeMR3aX0KnznVvWkZNF66ZpqAFc
+
 class AudioRecViewController: UIViewController, AVAudioRecorderDelegate, UITableViewDelegate, UITableViewDataSource {
 
     var recordingSession: AVAudioSession!
