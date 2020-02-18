@@ -8,14 +8,16 @@
 
 import Foundation
 import UIKit
+import AVFoundation
 
 class MainScreenViewController: UICollectionViewController {
     
-    let frontLabelArray = ["Word Therapy", "Story Book", "Speech Practice"]
+    let frontLabelArray = ["Word Therapy", "Story Book", "Speech Practice", "Settings"]
     let frontImageArray = [
         UIImage(named: "wordGame"),
         UIImage(named:"storyBook"),
-        UIImage(named: "speechPractice")
+        UIImage(named: "speechPractice"),
+        UIImage(named: "settings")
     ]
     var tablefontSize: Int = 22
     
@@ -30,6 +32,21 @@ class MainScreenViewController: UICollectionViewController {
         print("frame=\(self.view.frame) , width=\(self.view.frame.width), height=\(self.view.frame.height)")
         
         self.navigationItem.setHidesBackButton(true,  animated:true)
+        
+        let speechSynthesizer = AVSpeechSynthesizer()
+        // Line 2. Create an instance of AVSpeechUtterance and pass in a String to be spoken.
+        let speechUtterance: AVSpeechUtterance = AVSpeechUtterance(string: "Welcome to SpeechImprov Application. This application will help you learn vowels. If this was an actual emergency, then this wouldn’t have been a test.")
+        
+        //Line 3. Specify the speech utterance rate. 1 = speaking extremely the higher the values the slower
+        // speech patterns. The default rate, AVSpeechUtteranceDefaultSpeechRate is 0.5
+        //speechUtterance.rate = AVSpeechUtteranceMaximumSpeechRate / 4.0
+        speechUtterance.rate = 0.4
+
+        // Line 4. Specify the voice.
+        speechUtterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+        
+        // Line 5. Pass in the urrerance to the synthesizer to actually speak.
+        speechSynthesizer.speak(speechUtterance)
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -74,12 +91,23 @@ class MainScreenViewController: UICollectionViewController {
         case 2:
             UserDefaults.standard.set(2, forKey: "UserSelection")
             if UserDefaults.standard.bool(forKey: "InstrHitObject") {
-                performSegue(withIdentifier: "gotoHitObjectInstruct", sender: self)
+                performSegue(withIdentifier: "gotoSpeechPractice", sender: self)
             }
             else {
-                performSegue(withIdentifier: "gotoHitObjectInstruct", sender: self)
+                performSegue(withIdentifier: "gotoSpeechPractice", sender: self)
                 UserDefaults.standard.set(true, forKey: "InstrHitObject")
             }
+
+        case 3:
+            UserDefaults.standard.set(3, forKey: "UserSelection")
+            if UserDefaults.standard.bool(forKey: "InstrHitObject") {
+                performSegue(withIdentifier: "gotoSettings", sender: self)
+            }
+            else {
+                performSegue(withIdentifier: "gotoSettings", sender: self)
+                UserDefaults.standard.set(true, forKey: "InstrHitObject")
+            }
+            
         default:
             performSegue(withIdentifier: "gotoOptoKinetic", sender: self)
         }

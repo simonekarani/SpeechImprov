@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C0402D823FB9202002FF81F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0402D723FB9202002FF81F /* SettingsViewController.swift */; };
+		2C0402DA23FB9718002FF81F /* CustomSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0402D923FB9718002FF81F /* CustomSlider.swift */; };
 		2C4DAC77236E4FC60011D73B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4DAC76236E4FC60011D73B /* AppDelegate.swift */; };
 		2C4DAC79236E4FC60011D73B /* AudioRecViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4DAC78236E4FC60011D73B /* AudioRecViewController.swift */; };
 		2C4DAC7C236E4FC60011D73B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C4DAC7A236E4FC60011D73B /* Main.storyboard */; };
@@ -40,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2C0402D723FB9202002FF81F /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		2C0402D923FB9718002FF81F /* CustomSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSlider.swift; sourceTree = "<group>"; };
 		2C4DAC73236E4FC60011D73B /* SpeechImprov.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpeechImprov.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C4DAC76236E4FC60011D73B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C4DAC78236E4FC60011D73B /* AudioRecViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecViewController.swift; sourceTree = "<group>"; };
@@ -148,6 +152,8 @@
 				2C4DACA7236F86180011D73B /* ViewController.swift */,
 				2CFA3D4123EFFE5500DA460E /* MainScreenViewController.swift */,
 				2CFA3D4323EFFEED00DA460E /* MainScreenCollectionViewCell.swift */,
+				2C0402D723FB9202002FF81F /* SettingsViewController.swift */,
+				2C0402D923FB9718002FF81F /* CustomSlider.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -307,6 +313,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2CFA3D4623F0020700DA460E /* RoundButton.swift in Sources */,
+				2C0402DA23FB9718002FF81F /* CustomSlider.swift in Sources */,
 				2C4DACAD236FBF6D0011D73B /* CircleButton.swift in Sources */,
 				2C4DAC79236E4FC60011D73B /* AudioRecViewController.swift in Sources */,
 				2C4DAC77236E4FC60011D73B /* AppDelegate.swift in Sources */,
@@ -314,6 +321,7 @@
 				2CFA3D4423EFFEED00DA460E /* MainScreenCollectionViewCell.swift in Sources */,
 				2C4DAC7F236E4FC60011D73B /* SpeechImprov.xcdatamodeld in Sources */,
 				2CFA3D4223EFFE5500DA460E /* MainScreenViewController.swift in Sources */,
+				2C0402D823FB9202002FF81F /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
